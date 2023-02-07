@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField fx:id="txtInputName" layoutX="454.0" layoutY="23.0" onKeyTyped="#handleClickName" prefWidth="144.0" />
+      <Label fx:id="lblDisplay" layoutX="408.0" layoutY="61.0">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayHealth" layoutX="553.0" layoutY="367.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayKills" layoutX="270.0" layoutY="455.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayMoney" layoutX="272.0" layoutY="527.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayEnemy1HP" layoutX="553.0" layoutY="399.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayWinner" layoutX="539.0" layoutY="527.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayItemShop" layoutX="1006.0" layoutY="8.0" text="ITEM SHOP">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+         </font></Label>
+      <Button fx:id="btnLvl1" layoutX="323.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleClickLevel1" prefWidth="53.0" text="Level 1" />
+      <Button fx:id="btnLvl2" layoutX="436.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleClickLevel2" text="Level 2" />
+      <Button fx:id="btnLvl3" layoutX="552.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleClickLevel3" text="Level 3" />
+      <Button fx:id="btnLvl4" layoutX="655.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleClickLevel4" text="Level 4" />
+      <Label fx:id="lblDisplayAttackStatus" layoutX="545.0" layoutY="615.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <ListView fx:id="lstViewWeapons" layoutX="22.0" layoutY="221.0" onKeyPressed="#handleClickAttack" onMouseClicked="#handleClickAttack" prefHeight="209.0" prefWidth="200.0" />
+      <ListView fx:id="lstViewShopWeapons" layoutX="925.0" layoutY="224.0" onMouseClicked="#handleClickBuyWeapons" prefHeight="209.0" prefWidth="262.0" />
+      <Label fx:id="lblDisplayLevel" layoutX="526.0" layoutY="271.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayEnemy2HP" layoutX="553.0" layoutY="429.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayBuyStatus" layoutX="272.0" layoutY="559.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayText1" layoutX="580.0" layoutY="326.0" text="LAST BATTLE RESULTS:">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayMoneyProfit" layoutX="823.0" layoutY="382.0" textFill="#36a422">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayMoneyLoss" layoutX="823.0" layoutY="415.0" textFill="#bc2a13">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <ListView fx:id="lstViewShopArmor" layoutX="924.0" layoutY="45.0" onMouseClicked="#handleClickBuyArmor" prefHeight="140.0" prefWidth="262.0" />
+      <ListView fx:id="lstViewArmor" layoutX="22.0" layoutY="45.0" prefHeight="140.0" prefWidth="200.0" />
+      <Label fx:id="lblDisplayEnemy3HP" layoutX="553.0" layoutY="458.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayEnemy4HP" layoutX="553.0" layoutY="485.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayDeaths" layoutX="271.0" layoutY="493.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Button fx:id="btnFinalLvl" layoutX="757.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleClickFinalLevel" text="Final Level" />
+      <ListView fx:id="lstViewShopEffects" layoutX="925.0" layoutY="469.0" onMouseClicked="#handleClickBuyEffects" prefHeight="140.0" prefWidth="262.0" />
+      <ListView fx:id="lstViewEffects" layoutX="22.0" layoutY="469.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="lblDisplayOGHealth" layoutX="270.0" layoutY="367.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayOGEnemyHP" layoutX="271.0" layoutY="401.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="227.0" layoutY="28.0" text="THE QUEST by Karan Games Corp.">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayWeapons1" layoutX="1027.0" layoutY="436.0" text="WEAPONS">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayArmor1" layoutX="1034.0" layoutY="190.0" text="ARMOR">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayEffects1" layoutX="1033.0" layoutY="609.0" text="EFFECTS">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayInventory" layoutX="60.0" layoutY="8.0" text="INVENTORY">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+         </font></Label>
+      <ProgressBar fx:id="progressBar" layoutX="605.0" layoutY="27.0" prefHeight="18.0" prefWidth="127.0" progress="0.0" />
+      <ProgressIndicator fx:id="progressIndicator" layoutX="749.0" layoutY="16.0" prefHeight="32.0" prefWidth="16.0" progress="0.0" />
+      <Label fx:id="lblDisplayArmor" layoutX="94.0" layoutY="190.0" text="ARMOR">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayWeapons" layoutX="86.0" layoutY="432.0" text="WEAPONS">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayEffects" layoutX="93.0" layoutY="672.0" text="EFFECTS">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblDisplayInstructions1" layoutX="383.0" layoutY="156.0" text="Buy armor, weapons, and effects from the item shop on the right.">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDisplayInstructions" layoutX="302.0" layoutY="178.0" text="Click on weapons and armor in your inventory on the left to use them (effects are automatically applied).">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDisplayInstructions2" layoutX="293.0" layoutY="199.0" text="Make sure to select armor before fighting by clicking your weapon. Level up, and fight the boss! Good luck!">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRestart" layoutX="826.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleClickRestart" text="Restart Game" />
+      <Label fx:id="lblDisplayInstructions11" layoutX="313.0" layoutY="87.0" text="Welcome, you are on a mission to steal a precious jewel worth a lot of money, stored in a vault.">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDisplayInstructions111" layoutX="244.0" layoutY="108.0" text="However, the vault is inside a huge bunker, guarded by many enemies, and an enormous, strong boss which guards the vault.">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDisplayInstructions1111" layoutX="335.0" layoutY="132.0" text="If you want to get the jewel, you must pass all the levels of security by fighting the enemies.">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDisplayInstructions112" layoutX="472.0" layoutY="6.0" text="Enter Your Name">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
